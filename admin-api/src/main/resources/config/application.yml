@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    jdbc-url: jdbc:mysql://localhost:3306/NTC_DB?useSSL=false&serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    username: eblee
+    password: eblee
+    type: com.zaxxer.hikari.HikariDataSource
+
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 5
+      connection-timeout: 30000 # 30 seconds
+      idle-timeout: 600000 # 10 minutes
+      max-lifetime: 1800000 # 30 minutes
+      pool-name: MyHikariCP
+      auto-commit: true
+
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        use_sql_comments: true
+        format_sql: true
+    open-in-view: false
+
+file:
+  upload-dir: /uploads

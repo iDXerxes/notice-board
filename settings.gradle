@@ -1,0 +1,5 @@
+rootProject.name = 'notice'
+
+include 'core'
+include 'domain'
+include 'admin-api'
